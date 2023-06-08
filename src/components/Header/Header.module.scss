@@ -1,0 +1,66 @@
+@import "./../../scss/variables.scss";
+
+.wrapper {
+  max-width: 1200px;
+  font-family: "Comfortaa";
+  margin: 0 auto;
+
+  .header {
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: space-between;
+    height: 90px;
+    align-items: center;
+
+    .logo {
+      display: inline-block;
+      margin: 10px;
+
+      img {
+        width: 80px;
+        height: 80px;
+      }
+    }
+
+    .title {
+      text-align: center;
+      h1,
+      h4 {
+        margin: 0;
+        color: $color;
+      }
+    }
+
+    .contacts {
+      display: inline-block;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+      margin-right: 8px;
+
+      a {
+        text-decoration: none;
+        color: black;
+        font-weight: bold;
+        display: flex;
+        align-items: center;
+
+        p {
+          display: inline-block;
+          position: relative;
+          padding-left: 7px;
+        }
+
+        img {
+          width: 24px;
+          height: 24px;
+        }
+      }
+
+      a:hover {
+        transform: (1.1scale);
+        transition: 0.3s;
+      }
+    }
+  }
+}
