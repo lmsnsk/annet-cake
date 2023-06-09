@@ -12,7 +12,7 @@ import Navigation from "../Navigation/Navigation";
 
 const Header: React.FC = () => {
   return (
-    <div className={stl.wrapper}>
+    <>
       <header className={stl.header}>
         <div className={stl.logo}>
           <Link to="/">
@@ -43,7 +43,7 @@ const Header: React.FC = () => {
         </div>
       </header>
       <Navigation />
-    </div>
+    </>
   );
 };
 

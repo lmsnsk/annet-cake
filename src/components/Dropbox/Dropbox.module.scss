@@ -2,18 +2,37 @@
   position: absolute;
   padding: 10px 0;
   background-color: #fff;
+  transition: 0.3;
+  animation: fade 0.3s 1 normal;
+
+  @keyframes fade {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
 
   .box {
     display: flex;
     flex-direction: column;
     padding: 0;
+    text-align: start;
 
     li {
       padding: 4px 0;
       color: black;
+      transition: transform 0.4s;
+
       &:hover {
-        color: rgb(34, 60, 204);
+        transform: translateX(5px);
       }
     }
   }
+}
+
+.rootClosed {
+  transition: 0.3s;
+  opacity: 0;
 }
