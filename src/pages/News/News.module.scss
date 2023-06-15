@@ -1,0 +1,32 @@
+@import "./../../scss/variables.scss";
+
+.newsBlock {
+  margin: 10px 5px 20px 5px;
+  background-color: $bgcolor;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+
+  .textBlock {
+    display: block;
+    margin: 5px 5px 10px 5px;
+  }
+
+  .imageWrapper {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+
+    .imageBox {
+      width: 300px;
+      height: 300px;
+      border: 1px solid rgba(0, 0, 0, 0.2);
+      border-radius: 5px;
+      overflow: hidden;
+      margin: 1px;
+
+      img {
+        width: 100%;
+      }
+    }
+  }
+}
