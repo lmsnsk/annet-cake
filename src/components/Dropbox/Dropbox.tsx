@@ -25,7 +25,7 @@ const Dropbox: React.FC<DropboxProps> = ({ data }) => {
 
   return (
     <div onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}>
-      {data.title}
+      <span className={stl.title}>{data.title}</span> <span className={stl.arrow}>{">"}</span>
       {mounted && (
         <div
           className={`${stl.root} ${opened || stl.rootClosed}`}

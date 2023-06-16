@@ -36,3 +36,12 @@
   transition: 0.3s;
   opacity: 0;
 }
+
+.arrow {
+  display: inline-block;
+  transform: rotateZ(90deg);
+}
+
+.title {
+  cursor: pointer;
+}

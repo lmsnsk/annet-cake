@@ -1,12 +1,11 @@
 import axios from "axios";
 import React from "react";
-import { useEffect } from "react";
+import { createAsyncThunk } from "@reduxjs/toolkit";
 
 import stl from "./News.module.scss";
 
 import { useAppDispatch, useAppSelector } from "../../app/hooks";
 import { setNews } from "../../app/slices/newsSlice";
-import { createAsyncThunk } from "@reduxjs/toolkit";
 import NewsBlockItem from "./NewsBlockItem";
 
 const News: React.FC = () => {
@@ -23,7 +22,7 @@ const News: React.FC = () => {
     }
   });
 
-  useEffect(() => {
+  React.useEffect(() => {
     dispatch(fetchNews(newsURL));
   }, []);
 
@@ -31,12 +30,12 @@ const News: React.FC = () => {
 
   return (
     <>
+      <button className={stl.addNewsButton}>Добавить новость</button>
       {news.map((obj) => (
         <React.Fragment key={obj.text[0] + "/obj"}>
           <NewsBlockItem obj={obj} />
         </React.Fragment>
       ))}
-      ;
     </>
   );
 };
